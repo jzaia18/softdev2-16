@@ -12,7 +12,7 @@ def set_diff(a, b, testing = True):
 
 def sym_diff(a, b, testing = True):
   if testing: print "Testing symmetric difference on " + str(a) + ' & ' + str(b) + '...'
-  return set_diff(a, b, testing = False) + set_diff(b, a, testing = False)
+  return union(set_diff(a, b, testing = False), set_diff(b, a, testing = False))
 
 def cart_prod(a, b, testing = True):
   if testing: print "Testing cartesian product on " + str(a) + ' & ' + str(b) + '...'
@@ -39,6 +39,3 @@ print cart_prod([1, 2], [3, 4])
 print cart_prod([1, 2, 3], [3, 4])
 print cart_prod([1, 2, 3], [1, 2])
 print cart_prod([1, 2], ['red', 'white'])
-
-# uniqA = [x for x in a if x not in b]
-# uniqB = [y for y in b if y not in a]
