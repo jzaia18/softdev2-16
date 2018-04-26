@@ -12,7 +12,7 @@ def set_diff(a, b, testing = True):
 
 def sym_diff(a, b, testing = True):
   if testing: print "Testing symmetric difference on " + str(a) + ' & ' + str(b) + '...'
-  return union(set_diff(a, b, testing = False), set_diff(b, a, testing = False))
+  return union(set_diff(a, b, testing = False), set_diff(b, a, testing = False), testing = False)
 
 def cart_prod(a, b, testing = True):
   if testing: print "Testing cartesian product on " + str(a) + ' & ' + str(b) + '...'
